@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Counter">
+  <title>Counter</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page">
+    <ul id="list" class="list"></ul>
+  </main>
+  <form id="add-form" class="add">
+    <input
+      id="name-input"
+      type="text"
+      autocomplete="off"
+      autocapitalize="words"
+      enterkeyhint="done"
+      aria-label="Restaurant name"
+    >
+    <button type="submit">+</button>
+  </form>
+  <div id="menu" class="menu" role="menu" hidden>
+    <button type="button" data-action="dec" role="menuitem">Decrease</button>
+    <button type="button" data-action="delete" role="menuitem">Delete</button>
+  </div>
+  <div id="sheet" class="sheet" hidden>
+    <button type="button" class="sheet-dismiss" aria-label="Close"></button>
+    <div class="sheet-screen">
+      <p id="sheet-name" class="sheet-name"></p>
+      <button type="button" data-action="dec">Decrease</button>
+      <button type="button" data-action="delete">Delete</button>
+    </div>
+  </div>
+  <script src="./supabase-config.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
